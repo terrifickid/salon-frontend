@@ -34,7 +34,7 @@
           >
             <div class="col-span-12 md:col-span-3 opacity-50">Biography</div>
             <div class="col-span-12 md:col-span-9">
-              {{ member.fields.biography }} {{ member.fields.memberSince }}
+              {{ member.fields.biography }}
             </div>
             <div class="col-span-12 opacity-50 hover:opacity-100 pt-4">
               <router-link to="/manage/proposals" class="flex items-center">
