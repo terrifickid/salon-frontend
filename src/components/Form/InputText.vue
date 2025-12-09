@@ -6,13 +6,17 @@
       type="text"
       class="font-haffer sm:ml-0 bg-transparent block border-b border-black w-full text-black py-3 outline-none placeholder-opb"
       placeholder=""
-      maxlength="250"
+      maxlength="255"
       required
       v-model="value"
       @input="$emit('update', value)"
       @keyup.enter="$emit('ready')"
       autocomplete="off"
     />
+    <!-- Character counter -->
+    <div class="flex justify-end mt-2 text-sm text-gray-600">
+      {{ value.length }} / 255
+    </div>
     <FormHelp :help="help" v-if="help" />
     <FormButtonOk @ready="$emit('ready')" @back="$emit('back')" />
   </div>

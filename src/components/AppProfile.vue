@@ -168,6 +168,10 @@
             class="font-haffer bg-transparent block border border-black w-full text-black outline-none placeholder-opb p-2 mb-2 w-full"
             v-model="update.biography"
           />
+          <!-- Character counter -->
+          <div class="flex justify-end mt-2 text-sm text-gray-600">
+            {{ update?.biography?.length || 0 }} / 50000
+          </div>
         </template>
       </div>
     </div>
