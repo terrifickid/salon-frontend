@@ -14,7 +14,7 @@
     />
     <!-- Character counter -->
     <div class="flex justify-end mt-2 text-sm text-gray-600">
-      {{ value.length }} / 50000
+      {{ value.length }} / 50,000
     </div>
     <FormHelp :help="help" v-if="help" />
     <FormButtonOk @ready="$emit('ready')" @back="$emit('back')" />

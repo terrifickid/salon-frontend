@@ -170,7 +170,7 @@
           />
           <!-- Character counter -->
           <div class="flex justify-end mt-2 text-sm text-gray-600">
-            {{ update?.biography?.length || 0 }} / 50000
+            {{ update?.biography?.length || 0 }} / 50,000
           </div>
         </template>
       </div>
