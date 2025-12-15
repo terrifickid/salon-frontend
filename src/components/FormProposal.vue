@@ -217,6 +217,7 @@ export default {
         "processState",
         "verified",
         "adminApproved",
+        "queued",
       ],
       treasury: {},
     };

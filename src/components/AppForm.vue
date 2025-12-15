@@ -197,6 +197,7 @@ export default {
           "walletAddress",
           "softInvestmentCommitment",
           "adminApproved",
+          "queued",
           "memberSince",
         ];
         if (disabled.includes(field.id)) return false;
