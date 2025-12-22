@@ -30,7 +30,7 @@ export default {
     FormButtonOk,
     FormHelp,
   },
-  props: ["count", "title", "required", "choices", "help"],
+  props: ["count", "title", "required", "choices", "help", "id", "cached"],
   emits: ["ready"],
   data() {
     return {
@@ -42,6 +42,13 @@ export default {
       var symbols = ["A", "B", "C", "D", "E", "F"];
       return symbols[i];
     },
+  },
+  mounted() {
+    if (this.cached === true && localStorage.getItem(this.id) !== null) {
+      this.selectedIndex = this.choices.findIndex(
+        (el) => el === localStorage.getItem(this.id)
+      );
+    }
   },
 };
 </script>

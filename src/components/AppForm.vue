@@ -204,6 +204,23 @@ export default {
         return true;
       });
 
+      const cached = [
+        "typeOfEntity",
+        "firstName",
+        "walletAddress",
+        "emailAddress",
+        "address",
+        "phoneNumber",
+        "occupation",
+        "accreditationMethod",
+        "softInvestmentCommitment",
+      ];
+      this.fields.map(function (field) {
+        if (cached.includes(field.id)) {
+          field.cached = true;
+        }
+      });
+
       this.$emit("ready");
       this.ready = true;
       this.processing = false;

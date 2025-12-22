@@ -27,12 +27,17 @@ export default {
     FormButtonOk,
     FormHelp,
   },
-  props: ["count", "title", "required", "placeholder", "help"],
+  props: ["count", "title", "required", "placeholder", "help", "id", "cached"],
   emits: ["ready"],
   data() {
     return {
       value: "",
     };
+  },
+  mounted() {
+    if (this.cached === true && localStorage.getItem(this.id) !== null) {
+      this.value = localStorage.getItem(this.id);
+    }
   },
 };
 </script>
